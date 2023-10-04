@@ -33,4 +33,5 @@ def sort_highest_lowest(books):
 
 raamatud = [7, 4, 6, 2, 1, 11, 8]
 test_array = [48, 7, 90, 21, 84, 19, 61, 98, 76, 2, 17, 95, 33, 60, 37, 43, 82, 70, 56, 15]
-print(sort_highest_lowest(test_array))
+kasper_test = [7, 38, 12, 77, 62, 65]
+print(sort_highest_lowest(kasper_test))
