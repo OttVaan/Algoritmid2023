@@ -18,6 +18,45 @@ from openpyxl.utils import get_column_letter
 import time
 import random
 
+#Create an empty list with desired length
+def lifo_create(capacity):
+    array = [None] * capacity
+    return array
+
+#Add new element to the end of the list (first index that isnt empty)
+def lifo_add(item):
+    global end_index
+    if end_index < capacity:
+        work_array[end_index] = item
+        end_index += 1
+    else:
+        print("The stack is full.")
+
+#Remove the last element from the list
+def lifo_remove():
+    global end_index
+    last_item = work_array.pop(end_index - 1)
+    print(f"You removed the last item that was: {last_item}")
+    end_index -= 1
+
+#Take a look at the element that will come out next aka last added element
+def peek():
+    print(f"You peeked at the last element that was: {work_array[end_index-1]}")
+
+#This function checks if the list is empty and returns boolean
+def empty_check():
+    if start_index == end_index:
+        print("The list is empty.")
+        return True
+
+#This function checks list's size  
+def size_check():
+    size = end_index
+    return size
+
+
+#FROM HERE STARTS THE REAL CODE
+
 # Define start, end indexes and also the capacity of the array
 start_index = 0
 end_index = 0
@@ -31,45 +70,8 @@ sheet = workbook.active
 sheet['A1'] = 'Index'
 sheet['B1'] = 'Time µs'
 
-def lifo_create(capacity):
-    array = [None] * capacity
-    return array
-
-def lifo_add(item):
-    global end_index
-    if end_index < capacity:
-        work_array[end_index] = item
-        end_index += 1
-    else:
-        print("The stack is full.")
-
-def lifo_remove():
-    global end_index
-    last_item = work_array.pop(end_index - 1)
-    print(f"You removed the last item that was: {last_item}")
-    end_index -= 1
-
-def peek():
-    print(f"You peeked at the last element that was: {work_array[end_index-1]}")
-
-def empty_check():
-    if start_index == end_index:
-        print("The list is empty.")
-        return True
-    
-def size_check():
-    size = end_index
-    return size
-
-
-#FROM HERE STARTS THE REAL CODE
-
 # Number of rows to generate in excel Including the header row
 num_rows = capacity + 1  
-
-
-    
-
 
 # Start from row 2 (since the first row is for headers)
 for index in range(2, num_rows+1):
