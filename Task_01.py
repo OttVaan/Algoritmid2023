@@ -1,37 +1,62 @@
 """
-
-1. Raamatute järjestamise algoritm
-Ülesanne on luua selge ja lühike kirjalik algoritm, mis kirjeldab raamatute riiulil korraldamise samme nende kõrguse põhjal.
-
-Piirangud:
-Eeldage, et saate raamatu kõrgust vaadates kindlaks määrata. Arvestage, et riiulil on fikseeritud pikkus ja see mahutab kõik raamatud.
-
-Esitamiseks:
-Kirjalik algoritm pseudo-koodis või struktureeritud eesti keeles. Joonis algoritmi tööpõhimttest.
-
-NB! Kasutan koodi kirjutamisel inglise keelt, kood ei ole internetist kopeeritud!
+Ülesanne 1: Bubble Sort simulatsioon (1p)
+Antud on järgnevate arvude loend: [64, 34, 25, 12, 22, 11, 90]. 
+Simuleeri samm-sammult Bubble Sort algoritmi. 
+Iga läbimise järel kirjuta üles tulemuseks olev loend.
 """
 
-def sort_highest_lowest(books):
-    #Loome tühja listi, kuhu hakkame sorteerimist salvestama
-    start_list = books
-    result_list = []
 
-    #Alguses on kõrgeim raamat kõige esimene, mida me vaatame
-    for i in range(len(books)):
-        tallest = start_list[0]
-        #Võrdleme kõikide raamatutega, mida me ei ole veel sorteerinud ja leiame neist kõrgeima
-        for j in range(len(start_list)):
-            if start_list[j] > tallest:
-                tallest = start_list[j]
-        #Eemaldame raamatu sorteerimata raamatute listist ja lisame sorteeritud raamatute listi
-        start_list.remove(tallest)
-        result_list.append(tallest)
-    
-    return result_list
+start_list = [64, 34, 25, 12, 22, 11, 90]
+
+def BubbleSort(arr):        #bubble sort algorithm
+
+    did_sort = True         #var for checking if we moved something
+    steps = 0               #counter for steps
+    print(f"Step 0: {arr}")
 
 
-raamatud = [7, 4, 6, 2, 1, 11, 8]
-test_array = [48, 7, 90, 21, 84, 19, 61, 98, 76, 2, 17, 95, 33, 60, 37, 43, 82, 70, 56, 15]
-kasper_test = [7, 38, 12, 77, 62, 65]
-print(sort_highest_lowest(kasper_test))
+    while did_sort:         #main loop until we didnt have to move anything
+        did_sort = False
+        list_len = len(arr)
+
+        for i in range(list_len-1):
+            if arr[i] > arr[i+1]:
+                memory = arr[i]
+                arr[i] = arr[i+1]
+                arr[i+1] = memory
+                did_sort = True
+                steps += 1
+                print(f"Step {steps}: {arr}")
+        
+        if not did_sort:    #Print final result when we didnt change anything
+
+            print(f"Sorted list: {arr}")
+
+
+
+
+def BubbleSortFirst(arr):        
+
+    did_sort = True         
+    steps = 0               
+
+
+    while did_sort:
+        did_sort = False
+        list_len = len(arr)
+
+        for i in range(list_len-1):
+            if arr[i] > arr[i+1]:
+                memory = arr[i]
+                arr[i] = arr[i+1]
+                arr[i+1] = memory
+                did_sort = True
+                steps += 1
+                if steps == 1:
+                    print(f"Bubble // Step {steps}: {arr}")
+        
+        if not did_sort:
+            break
+
+if __name__ == "__main__":        
+    BubbleSort(start_list)

@@ -1,106 +1,51 @@
 """
-
-2. LIFO/FIFO andmestruktuur.
-Looge mõni peamine LIFO või FIFO andmestruktuur teie valitud programmeerimiskeeles.
-
-Piirangud:
-Ärge kasutage ühtegi sisseehitatud teeki lifo või fifo jaoks.
-
-Esitamiseks:
-Andmestruktuuri teostamiseks kood.
-Dokumentatsioon, mis lühidalt selgitab teie koodi.
-Analüüsige ja mõõtke oma sisestamise ja kustutamise toimingute ajaline keerukus, selgitage oma põhjendust.
-
+Ülesanne 2: Selection Sort visualiseerimine (1p)
+Joonista plokkskeem, mis esindab Selection Sort algoritmi. 
+Kasutades seda vooluskeemi, demonstreeri sortimisprotsessi loendile: [29, 15, 56, 77, 18]. 
+Tuvasta iga iteratsiooni ajal väikseim element.
 """
 
-import openpyxl
-from openpyxl.utils import get_column_letter
-import time
-import random
+start_list = [29, 15, 56, 77, 18]           #Our test list
 
-#Create an empty list with desired length
-def lifo_create(capacity):
-    array = [None] * capacity
-    return array
+def SelectionSort(arr):                     #Selection sort algorithm
 
-#Add new element to the end of the list (first index that isnt empty)
-def lifo_add(item):
-    global end_index
-    if end_index < capacity:
-        work_array[end_index] = item
-        end_index += 1
-    else:
-        print("The stack is full.")
+    arr_len = len(arr)
+    steps = 0
+    print(f"Step 0: {arr}")
 
-#Remove the last element from the list
-def lifo_remove():
-    global end_index
-    last_item = work_array.pop(end_index - 1)
-    print(f"You removed the last item that was: {last_item}")
-    end_index -= 1
+    for index in range(arr_len-1):          #go through the list len - 1 times (dont need to chceck last)
+        smallest = arr[index]               #at the beginning smallest is at index
+        smallest_index = index
+        for comp in range(index, arr_len):  #need to start from index not full start
+            if arr[comp] < smallest:        #check if next in array is the smallest that we have seen this run
+                smallest = arr[comp]
+                smallest_index = comp
 
-#Take a look at the element that will come out next aka last added element
-def peek():
-    print(f"You peeked at the last element that was: {work_array[end_index-1]}")
+        arr[smallest_index] = arr[index]    #change positions of smallest and our run start
+        arr[index] = smallest
+        steps += 1
+        print(f"Step {steps}: {arr}")       #print step
 
-#This function checks if the list is empty and returns boolean
-def empty_check():
-    if start_index == end_index:
-        print("The list is empty.")
-        return True
+def SelectionSortFirst(arr):                
 
-#This function checks list's size  
-def size_check():
-    size = end_index
-    return size
+    arr_len = len(arr)
+    steps = 0
 
+    for index in range(arr_len-1):         
+        smallest = arr[index]              
+        smallest_index = index
+        for comp in range(index, arr_len):  
+            if arr[comp] < smallest:     
+                smallest = arr[comp]
+                smallest_index = comp
 
-#FROM HERE STARTS THE REAL CODE
+        arr[smallest_index] = arr[index]  
+        arr[index] = smallest
+        steps += 1
+        if steps == 1:
+            print(f"Selection // Step {steps}: {arr}")     
 
-# Define start, end indexes and also the capacity of the array
-start_index = 0
-end_index = 0
-capacity = 10000
-
-# Create a new Excel workbook and select the active sheet
-workbook = openpyxl.Workbook()
-sheet = workbook.active
-
-# Add headers to my columns
-sheet['A1'] = 'Index'
-sheet['B1'] = 'Time µs'
-
-# Number of rows to generate in excel Including the header row
-num_rows = capacity + 1  
-
-# Start from row 2 (since the first row is for headers)
-for index in range(2, num_rows+1):
-    # Write the index in column A
-    sheet['A{}'.format(index)] = index - 2  # Subtract 2 to start from 0
-    # Create the stack we want to work with
-    work_array = lifo_create(index - 1)
-    end_index = 0
-    
-    start_time = time.time_ns()
-    for size in range(len(work_array)):
-        # Calculate and write the time value in column B
-        new_value = random.randint(0, 9)
-        lifo_add(new_value)   
-
-    end_time = time.time_ns()
-    print(work_array)   
-    total_time = int((end_time - start_time) / 1000)
-    print(total_time, len(work_array))
-    sheet['B{}'.format(index)] = total_time
-
-# Save the workbook to a file
-workbook.save('index_time_data.xlsx')
-
-# Close the workbook
-workbook.close()
-
-print(work_array)
-
-
-
-    
+if __name__ == "__main__":        
+    SelectionSort(start_list)
+        
+        
