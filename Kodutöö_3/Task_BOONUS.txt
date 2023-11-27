@@ -1,0 +1,26 @@
+FIBONACCI SEARCH 
+
+Kuidas see töötab?
+Järjend peab olema sorteeritud. Vaatame, kui pikk on meie järjend. Fibonacci arvu valime järjendi pikkuse järgi.
+Me alustame väikseimast Fibonacci arvust, mis on suurem või võrdne järjendi pikkusega. Nüüd võtame sellest eelmise fibonacci arvu.
+Võrdleme otsitavat elementi Fibonacci arvu indeksil oleva elemendiga. Kui meie otsitav on suurem, kui indeksil olev arv,
+siis välistame kogu järjendi, mis jääb indeksist ette poole ning kui otsitav on väiksem, kui indeksil olev arv, siis välistame
+indeksi ja lõpu vahelise lõigu. Jätame meelde mitmendal indeksil me olime, ning jätkame sama protsessi nii kaua, kuni me
+oleme leidnud järjendist elemendi, mis on võrdne meie otsitavaga. 
+
+FIBONACCI = [0,1,1,2,3,5,8,13,21,...]
+
+Kui me jõuame oma Fibonacci järjendis indeksile 0, siis järelikult sellist elementi ei ole sellises arvreas.
+
+Ma ei ole päris kindel, kuidas viimasele küsimusele vastata, sest ma leidsin kaks erinevat Fibonacci otsingu algoritmi.
+1. Alustame vaatlemist fibonacci esimesest elemendist ja hakkame vaatame aina suurema sammuga vahemikku.
+2. Alustame vaatlemist fibonacci elemendist on on kõige väiksem ja >= järjendi pikkusest.
+
+Mõlemad peaksid olema kiiremad, kui binaarne otsing olukorras, kus otsitav on suurema tõenäosusega kas järjendi
+alguses või lõpus vastavalt kumba Fibonacci meetodit me kasutame.
+
+1. Kui on esimene meetod    => kuna meie samm on väiksem, siis ilmselt jõuame järjendi alguses oleva otsitavani kiiremini, 
+                               kui binaarne otsing, kes peab tegema rohkem võrdlusi, et järjendi algusesse jõuda.
+
+2. Kui on teine meetod      => kuna me suudame välistada juba esimese sammuga 61.8% (Fibonacci suhtearv) vs binaarse 50%,
+                               siis me jõuame viimaste elmentideni kiiremini, kui binaarse otsinguga.

@@ -1,0 +1,14 @@
+Ma ei ole kindel, kas sellist süsteemi keegi kasutab, aga filme saaks voogedastusplatvormil järgmiselt.
+
+Kui panna otsingusse filmi nimi, siis see sõneline väärtus konverteeritakse kindla algoritmi alusel arvuliseks
+väärtusesk. Sama on tehtud kõikide filmideaga selles serveris. Nüüd on meil võtmele(arvuline väärtus) vastav väärtus(filmi data).
+Nüüd võtame, ette serveris oleva järjendi kuhu on salvestatud info filmi kohta. Saame väärtust otsides leida mälus koha,
+kuhu oleme salvesatanud filmi kohta vajaliku info (Näitlejad, kirjeldus, filmifaili asukoht mälus, jne.).
+
+Sellise lahenduse puhul kasutaksin selles kodutöös varem mainitud algoritmidest Binary Searchi. Põhjus on selles, et sellised
+andmebaasid on reeglina tohutult suured. Nendes võib olla sadu, kui mitte tuhandeid filme ja sarju. Nii suure info kogusega
+on mõistlik kasutada binaarset otsingut, kuna nii saame väga suurt osa oma andmebaasist kiiresti välistada ja ei pea kõiki
+filme läbi käima.
+
+Süsteemi saaks parendada läbi selle, kui näiteks eraldada filmid seriaalidest. Kuigi kuna ajaline keerukus on halvimal juhul 
+log n, siis see isegi ei vähenda väga palju vajalike sammude arvu.
