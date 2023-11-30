@@ -1,0 +1,31 @@
+Ülesanne 1: Räsimine
+
+Räsimise:
+
+Räsimine on protsess, kus andmeid töödeldakse räsifunktsiooni abil, et genereerida kindla pikkusega unikaalne jada.
+Idee seisneb selles, et räsifunktsioon võtab sisendina mitmesuguseid andmeid ja 
+muudab selle kindla pikkusega "sõrmejäljeks". Sõrmejälge saab seejärel kasutada andmete kiireks otsimiseks 
+või võrdlemiseks. Eesmärk ongi saavutada kiire andmete otsimine, lisamine ja kustutamine, tagades räsiunikaalsuse,
+et erinevatele sisendandmetele ei omsitataks sama räsi.
+
+
+
+Hea räsifunktsiooni omadused:
+
+Unikaalsus:                 Iga sisendi jaoks tuleks genereerida unikaalne räsi.
+Kiirus:                     Räsifunktsioon peaks olema kiiresti arvutatav, et tagada efektiivsus.
+Vastupidavus põrgetele:     Oleks raske leida kahte erinevat sisendit, mille puhul räsifunktsioon annab sama tulemuse.
+Avalikkus (public):         Räsifunktsioon peaks olema avalikult teada, kuid sellest ei tohiks olla võimalik tuletada sisendandmeid.
+Deterministlikkus:          Iga konkreetse sisendi korral peaks räsifunktsioon alati andma sama väljundi.
+
+
+
+Kokkupõrgete lahendamise tehnikad:
+
+Eraldi aheldamine:          Kokkupõrkedest tulenevad elemendid asetatakse ühte räsiväärtust omavasse "ahelasse" 
+                            (näiteks seotud loendi või muu struktuuri abil). Lihtne ja efektiivne, kuid võib põhjustada 
+                            mälu ülekoormust, eriti kui ahelad muutuvad pikaks.
+
+Avatud aadressimine:        Andmed sisestatakse otse räsitabelisse, ilma täiendavate struktuurideta.
+                            Kui tekib kokkupõrge, leitakse järgmine vaba koht tabelist vastavalt teatud 
+                            algoritmile (nt lineaarne proovimine, kvadratuurproovimine, topeltsamm).
