@@ -1,0 +1,42 @@
+1. Ülevaade avatud aadressimise meetodist:
+
+Avatud aadressimine on räsimise kokkupõrgete lahendamise meetod, kus püütakse leida uus vaba koht räsitabelis, 
+kui esialgne koht on hõivatud. See tähendab, et kui tekib kokkupõrge, siis otsitakse järgmisele kohale tabelis seni, 
+kuni leitakse esimene vaba koht.
+
+
+
+2. Võrdlus Kolme Tehnikaga:
+
+Lineaarne otsing:
+
+Uus aadress arvutatakse lineaarselt järgmise tühja koha leidmiseks: (hash_value + i) % table_size, kus i on proovide arv.
+Lihtne rakendada, võib põhjustada "klastrite" teket, kus korduvad elemendid moodustavad järjestiku.
+
+
+Ruuduline otsing:
+
+Uus aadress arvutatakse ruuduna proovide arvust: (hash_value + i^2) % table_size.
+Vähendab lineaarse otsingu klastrite mõju, kuid võib neid endiselt põhjustada.
+
+
+Topelträsimine:
+
+Kasutatakse kahte räsi: esimene räsi arvutatakse tavaliselt nagu räsi algoritm ise, ja teine räsi määrab räsi suuruse: 
+(hash_value + i * hash2_value) % table_size. Võib vähendada klastrite mõju ja pakkuda paremat jaotust, kui teine räsi on hästi valitud.
+
+
+
+3. Millistes olukordades iga tehnika oleks kõige efektiivsem:
+
+Lineaarne Otsing:
+        Sobib hästi lihtsateks rakendusteks, kus proovide arv on väike ja räsi jaotus on ühtlane.
+        Efektiivne, kui andmeid sisestatakse ja kustutatakse suhteliselt harva.
+
+Ruuduline Otsing:
+        Kasulik olukordades, kus proovide arv on olulisem kui lineaarse otsingu korral.
+        Võib vähendada klastrite mõju, kui see on õigesti konfigureeritud.
+
+Topelträsimine:
+        Kõige efektiivsem, kui on valitud hästi toimiv teine räsi.
+        Sobib hästi olukordadesse, kus räsi jaotus on keerukas või ettearvamatu.

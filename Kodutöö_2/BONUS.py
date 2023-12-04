@@ -7,7 +7,7 @@ c) Insertion Sort
 """
 
 from Task_01 import BubbleSortFirst as bubble 
-from Task_02 import SelectionSortFirst as select
+from Kodutöö_4.Task_02 import SelectionSortFirst as select
 from Task_03 import InsertionSortFirst as insert
 
 
