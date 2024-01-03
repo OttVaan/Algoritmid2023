@@ -114,7 +114,7 @@ def generate_sudoku_puzzle(difficulty):
     return sudoku_puzzle
 
 # Example usage:
-difficulty_level = input("--Select difficulty--\n easy, medium, hard\n---------------------\ndifficulty:")
+difficulty_level = input("\n\n--Select difficulty--\n easy, medium, hard\n---------------------\ndifficulty:")
 sudoku_puzzle = generate_sudoku_puzzle(difficulty_level)
 
 #Sudoku puzzle on embeded list, mida saab lahendus algoritmile sisse sööta.
