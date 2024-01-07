@@ -1,0 +1,37 @@
+Räsitabeli koormustegur:
+
+Räsitabeli koormustegur on suhe tegelikult salvestatud elementide arvu ja räsitabeli suuruse vahel. 
+
+Koormustegur mõõdab, kui palju räsitabel on täidetud. Kõrge koormustegur tähendab, et räsitabel on ülekoormatud, 
+st liiga palju elemente on salvestatud samas tabeli suuruses, mis võib põhjustada konflikte ja aeglustada otsimisprotsesse.
+
+Miks koormustegur on oluline:
+
+Optimaalse jõudluse tagamiseks on soovitatav hoida koormustegur madal. Liiga kõrge koormustegur suurendab konfliktide tõenäosust, 
+mis võib mõjutada otsingute ja sisestamiste kiirust. Liiga suur koormustegur suurendab mälu kulu, kuna räsitabel peab olema suurem, 
+et mahutada kõik elemendid.
+
+
+
+Rehashing:
+
+Rehashing on protsess, kus räsitabeli suurus suureneb või väheneb, et säilitada optimaalne koormustegur. Kui koormustegur ületab 
+kindla lävendi (tavaliselt 0.7 või 0.8), käivitatakse rehashing. Lihtne rehashingu protsess hõlmab järgmisi samme:
+
+- Loo uus räsitabel: Loob uue räsitabeli, mille suurus on tavaliselt järgmine algarv pärast olemasoleva tabeli kahekordistamist.
+- Uute elementide sisestamine: Liigub kõik olemasolevad elemendid uude räsitabelisse, kasutades uusi räsimisfunktsioone.
+- Vana räsitabeli vabastamine: Vabastab mälu vana räsitabeli ja seob uue räsitabeli.
+
+
+Rehashingu mõju räsitabeli jõudlusele:
+
+- Parandab otsingukiirust: Õige rehashing vähendab koormustegurit, mis parandab otsingukiirust ja vähendab konfliktide tõenäosust.
+
+- Suurendab mälu kulu lühiajaliselt: Rehashingu ajal võib mälu kulu suureneda, kuna mõlemad vana ja uus räsitabel on 
+  mälus ajutiselt olemas.
+
+- Üldiselt parandab jõudlust: Kui rehashing on hästi juhitud, võib see üldiselt parandada räsitabeli jõudlust ja säilitada 
+  efektiivset andmestruktuuri.
+
+- Efektiivne ruumi kasutamine: Kui elemente eemaldatakse, võib teine tüüp rehashingut olla vajalik, et vähendada räsitabeli 
+  suurust ja tagada efektiivne ruumi kasutamine.

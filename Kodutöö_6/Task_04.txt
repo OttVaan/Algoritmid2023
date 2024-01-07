@@ -1,0 +1,31 @@
+Bellman-Fordi Algoritmi Teoreetiline Kirjeldus:
+Bellman-Fordi algoritm on lühima tee leidmise algoritm kaalutud graafides, mis võib sisaldada ka negatiivseid kaale. 
+
+Algoritm:
+Alustades algussõlmest, märgistatakse kõik sõlmed lõpmatu kaugusega, välja arvatud algussõlm, mille kaugus on null.
+Korratakse graafi servade üle käimist ∣V∣−1 korda, kus ∣V∣ on sõlmede arv.
+Igal sammul uuendatakse iga sõlme kaugust, kui leitakse lühem tee.
+
+
+
+Erinevused Dijkstra Algoritmiga:
+
+Kaalude iseloom:
+Dijkstra algoritm eeldab mitte-negatiivseid kaalusid, samas kui Bellman-Ford võimaldab ka negatiivseid kaalusid.
+
+Lõpmatu kauguse käsitlemine:
+Dijkstra algoritm kasutab alguses lõpmatut kaugust, mida vähendatakse ainult positiivsete kaaludega. 
+Bellman-Ford võimaldab kaugust alguses märkida lõpmatuks, kuid see kaugus võib väheneda ka negatiivsete kaalude korral.
+
+
+Negatiivsete Tsüklite Tuvastamine:
+
+Bellman-Fordi algoritm saab tuvastada negatiivseid tsükleid graafis, kui pärast ∣V∣−1 iteratsiooni saab mõne sõlme kaugust veelgi 
+vähendada. Kui see juhtub, siis graaf sisaldab negatiivset tsüklit.
+
+Praktiline Tähtsus:
+
+Negatiivsete tsüklite olemasolu tuvastamine on praktiliselt oluline, sest:
+
+Need tsüklid võivad põhjustada lõputuid tsükleid lühimate teede leidmisel.
+Kui negatiivne tsükkel on olemas, ei pruugi lühim tee üldse eksisteerida.

@@ -1,0 +1,28 @@
+Graafide värvimise probleemi olemus:
+
+Graafide värvimise probleem seisneb selles, kuidas värvida graafi sõlmed nii, et ühegi kahe omavahel ühendatud sõlme 
+ei oleks sama värvi. Värvi määramisel tuleb arvestada, et iga sõlme värv peab erinema selle naabrite värvist. 
+
+Graafide värvimise probleemi tähtsus arvutiteaduses:
+
+Planeerimine ja ressursside jaotamine:
+Graafide värvimist saab kasutada aeglustamise vältimiseks või ressursside optimaalseks jaotamiseks. Näiteks võib iga sõlm esindada 
+ülesannet või ressurssi ning värvide arv määrab, kui palju ressursse on samaaegselt saadaval või millistel ajahetkedel ülesandeid 
+täidetakse.
+
+Graafilised modelleerimised:
+Graafide värvimist kasutatakse graafilistes modelleerimistes, näiteks lõikusgraafides ja GIS (geograafiline infosüsteem). 
+Värvides lõikusgraafi sõlmed erinevateks värvi, saab eristada erinevaid lõike.
+
+Telekommunikatsioonivõrgud:
+Graafide värvimist kasutatakse ka telekommunikatsioonivõrkude optimaalseks kanalite jaotamiseks, et vältida häireid ja 
+tagada sujuv andmeedastus.
+
+Ressursside jaotamine:
+Iga ressurss (nt. töötaja, masin, aeg) võib olla esitatud graafi sõlmena. Graafi servad näitavad, millised ressursid on omavahel 
+konfliktis. Värvimine näitab, millised ressursid saavad samal ajahetkel toimida või millised ressursid jagavad mingit ühist 
+aspekti (näiteks samu masinaid).
+
+Konfliktide Lahendamine:
+Graafi sõlmed võivad esindada erinevaid osapooli või ülesandeid, ja servad näitavad konflikti. Graafide värvimine aitab määrata, 
+millised osapooled või ülesanded saavad koos eksisteerida või millised vajavad lahendamist eraldi.

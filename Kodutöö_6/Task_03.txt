@@ -1,0 +1,28 @@
+Dijkstra Algoritmi Teoreetiline Kirjeldus:
+
+Dijkstra algoritm on üks populaarsemaid algoritme lühima tee leidmiseks kaalutud graafides, kus servadel on positiivsed kaalud.
+
+Algoritm:
+Alustades algussõlmest, märgistatakse sõlmede kogum lõpmatu kaugusega (välja arvatud algussõlm), mille kaugus on null.
+Valitakse kõige lähemal olev märgistamata sõlm.
+Uuendatakse kaugusi, kui uus tee on lühem kui senine teadaolev tee.
+Korratakse samme, kuni kõik sõlmed on märgistatud.
+
+
+Kasutamine:
+Dijkstra algoritm on kasulik olukordades, kus:
+
+-   Graaf on suunatud ja kaalutud.
+-   Servadel on mitte-negatiivsed kaalud.
+-   Otsitakse lühimat teed kahe sõlme vahel.
+-   Dijkstra algoritm tagab, et pärast selle rakendamist on iga sõlme juures näidatud lühim teekond algussõlmest ja kaugus.
+
+
+Efektiivsed olukorrad:
+    Dijkstra on efektiivne, kui graaf on väike või kui muudatusi graafis tehakse sageli, sest see arvestab dünaamilisi muutusi 
+    suhteliselt hästi.
+
+
+Ebaefektiivsed olukorrad:
+    Dijkstra võib muutuda aeglasemaks suurte graafide korral, kus graaf harva muutub. Kui graafi servadel on negatiivsed kaalud, siis Dijkstra 
+    algoritm ei pruugi toimida korrektselt.

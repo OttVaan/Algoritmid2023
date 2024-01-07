@@ -1,0 +1,54 @@
+P vs NP probleemi olemus:
+
+P vs NP probleem on üks tähtsamaid küsimusi arvutiteaduses ja matemaatikas, mis puudutab arvutuslikku keerukust. 
+Selle probleemi olemus seisneb küsimuses, kas iga probleemi lahendamine on sama lihtne kui selle lahenduse kontrollimine?
+
+
+
+
+P (polünoomiaalne): Probleem kuulub P-klassi, kui selle lahendamiseks on olemas algoritm, mille ajakomplekssus on polünoomiaalne 
+vastavalt sisendi suurusele.
+
+NP (mitteterminaalne): Probleem kuulub NP-klassi, kui selle lahendus on kontrollitav polünoomiaalse ajakomplekssusega, 
+isegi kui selle lahendamine võib olla raskem.
+
+
+
+
+Tähtsus arvutiteaduses:
+
+P vs NP probleem on sügavalt seotud arvutiteaduse ja algoritmide uurimisega ning sellel on olulised tagajärjed:
+
+Arvutuslik keerukus:
+Probleem on seotud algoritmide keerukusega. Kui suudetakse näidata, et P = NP, tähendaks see, et iga NP-probleem on lahendatav 
+polünoomiaalse ajakomplekssusega algoritmiga. See muudaks paljud keerukad probleemid arvutuslikult lihtsaks.
+
+
+Krüptograafia:
+P vs NP küsimus mõjutab ka krüptograafiat. Kui P = NP, võib see ohustada paljusid tänapäeva krüptosüsteeme, 
+kuna keerukate krüptoalgoritmide murdmiseks piisaks polünoomiaalse ajakomplekssusega algoritmist.
+
+
+Praktilised rakendused:
+Teadmised P vs NP kohta võivad suunata tähelepanu teatud probleemide lahendamise keerukusele ja aidata optimeerida algoritme 
+praktilistes rakendustes, näiteks andmebaaside päringud, marsuutimisprobleemid, planeerimine jne.
+
+
+
+
+Miks on P vs NP probleemi lahendamine oluline:
+
+Algoritmide efektiivsus:
+Küsimus P vs NP määratleb fundamentaalseid piire algoritmide efektiivsusele ja võimele lahendada keerukaid probleeme.
+
+Praktilised tagajärjed:
+Kui P = NP, tähendaks see, et paljud praktilised probleemid, mis tunduvad keerukad, võivad olla lahendatavad efektiivsete 
+algoritmidega.
+
+Krüptograafia ohutus:
+Kui P = NP, siis mõned krüptosüsteemid, mis tuginevad NP-rasketele probleemidele, ei pruugi olla turvalised. 
+Lahendus võiks kaasa tuua uusi lähenemisviise krüpteerimisele.
+
+Teoreetiline tähtsus:
+Probleemi lahendamine annaks sügavama arusaama algoritmide ja arvutusliku keerukuse teooriast, mis omakorda mõjutaks 
+arvutiteadust tervikuna.
