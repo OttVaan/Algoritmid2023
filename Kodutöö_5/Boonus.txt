@@ -1,0 +1,59 @@
+Binaarpuude tasakaalustamise algoritmide teoreetiline võrdlus:
+
+## AVL puu:
+    Tasakaalustamismeetod: AVL puu kasutab roteerimist tasakaalu taastamiseks.
+
+    Eelised: Pakub ranged tasakaalureeglid, mis tagavad O(logn) otsingukomplekssuse.
+
+    Rakendused: Sobib hästi olukordadesse, kus otsingute kiirus on kriitiline ja puu struktuur muutub harva.
+
+## Punase-Must Puu:
+    Tasakaalustamismeetod: Kasutab värvimist ja roteerimist.
+
+    Eelised: Pakub tasakaalu, mõnevõrra vähem range kui AVL, kuid vähem tasakaalustamisoperatsioone.
+
+    Rakendused: Hea mälu kasutuse juhtudel ja kui lisamise ja kustutamise operatsioone tehakse sagedamini.
+
+## Splay Puu:
+    Tasakaalustamismeetod: Splay puu ei hoia rangeid tasakaalureegleid, selle asemel toimib splay-operatsioon, mis viib 
+    hiljuti kasutatud sõlme puu juurde.
+
+    Eelised: Sobilik dünaamiliste andmestruktuuride puhul, kus sagedased operatsioonid viitavad viimati kasutatud sõlmedele.
+
+    Rakendused: Kasutatakse mõnes veebilehitsejas ja p2p-võrgu protokollis.
+
+## B-puu:
+    Tasakaalustamismeetod: Jagab sõlmed blokkidesse, iga blokk sisaldab kindlat arvu sõlmi, tagades, et puu on tasakaalus.
+
+    Eelised: Sobib hästi andmebaasidele ja failisüsteemidele, kusjuures operatsioonid on seotud blokkide lugemise ja kirjutamisega.
+
+    Rakendused: Andmebaasid, failisüsteemid, kus blokkide suurused on olulised.
+
+
+
+
+
+Kuidas need algoritmid aitavad optimeerida andmestruktuuride jõudlust erinevates rakendustes:
+
+## AVL Puu:
+    Aitab optimeerida otsinguid ja tasakaalustada puud, mis on oluline, kui otsingud on sagedased ja vajavad kiiret reaktsiooni.
+
+    Sobib hästi fikseeritud või väikese suurusega andmestruktuuridele.
+
+## Punase-Must Puu:
+    Vähem rangete tasakaalureeglite tõttu sobib see hästi dünaamilisematele andmestruktuuridele, kus lisamise ja kustutamise 
+    operatsioone tehakse rohkem.
+
+    Tõhus mälu kasutamine muudab selle heaks valikuks mõnedes piiratud ressurside keskkondades.
+
+## Splay Puu:
+    Töötab hästi olukordades, kus mõned sõlmed on sagedamini kasutatud kui teised, kuna splay-operatsioon viib sagedamini kasutatud 
+    sõlme puu juurde.
+
+    Sobib dünaamilistele andmestruktuuridele, kus kasutatud sõlmedel on suurem tõenäosus uuesti kasutamiseks.
+
+## B-puu:
+    Sobib andmebaasidele ja failisüsteemidele, kus suur hulk andmeid on salvestatud blokkidesse, tagades, et operatsioonid on 
+    efektiivsed blokkide lugemise ja kirjutamise kaudu.
+
+    Toetab suuri andmehulki, mis on jaotatud ühtlasteks blokkideks, muutes selle sobilikuks suuremahuliste andmete haldamiseks.

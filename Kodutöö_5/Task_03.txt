@@ -1,0 +1,29 @@
+Binaarne otsingupuu on andmestruktuur, kus iga sõlm võib omada kuni kaks alamsõlme (vasak ja parem).
+
+Iga sõlme vasak alamsõlm sisaldab ainult väärtusi, mis on väiksemad kui sõlme oma.
+Iga sõlme parem alamsõlm sisaldab ainult väärtusi, mis on suuremad kui sõlme oma.
+See struktuur tagab, et iga sõlm on seotud väärtusega, mis on suurem kui tema vasakud alamsõlmed ja väiksem kui tema paremad alamsõlmed. Seega, binaarne otsingupuu võimaldab kiiret otsingut, lisamist ja kustutamist.
+
+Põhielemendid:
+
+Sõlm -                      Iga sõlm sisaldab väärtust ja viiteid tema vasakule ja paremale alamsõlmele.
+Juursõlm -                  Esimene sõlm puus, millele kõik teised sõlmed on alamsõlmed.
+Vasak ja parem alamsõlm -   Viited sõlmedele, mille väärtused on vastavalt väiksemad või suuremad kui praeguse sõlme oma.
+Lehtsõlm -                  Sõlm, millel pole alamsõlmi, st. see asub puu tipus.
+
+Tasakaalustamata puude mõju BST tõhususele ja optimeerimine:
+
+Tasakaalustamata binaarsed otsingupuud võivad põhjustada kõrgemat otsimise aega, eriti kui puu moodustub järjestikustest või 
+sorteeritud sisestustest. Kui BST on tasakaalustamata, võib selle kõrgus olla kuni n, kus n on sõlmede arv. See võib viia
+otsinguoperatsioonide O(n) keerukuseni.
+
+Optimeerimise meetodid tasakaalustamata puude jaoks:
+
+AVL-puud:           AVL-puud on spetsiaalselt tasakaalustatud binaarsed otsingupuud, kus iga sõlme tasakaaluks nimetatakse vasaku ja 
+                    parema alampuude kõrguste vahe. AVL-puude puhul hoitakse tasakaalu, et tagada O(log n) otsimise aeg.
+
+Punase-must puud:   See on teine tasakaalustatud binaarne otsingupuu tüüp. Punase-must puud kasutavad värve sõlmede märgistamiseks 
+                    ning hoiavad kindlaid reegleid, et tagada tasakaal. Nagu AVL-puud, tagavad ka punase-must puud O(logn) otsimise aja.
+
+Splay-puud:         Splay-puud on dünaamilised andmestruktuurid, mis rakendavad splay-operatsioone, et viia sagedasti kasutatud 
+                    sõlmed puu juurde, mis aitab parandada otsingu kiirust.

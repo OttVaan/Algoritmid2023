@@ -4,6 +4,8 @@ import copy
 puzzle_list = []
 
 def generate_sudoku_puzzle(difficulty):
+
+    #Generate the original solvable sudoku board
     def generate_sudoku_board():
         # Initialize a 9x9 Sudoku board with zeros
         board = [[0 for _ in range(9)] for _ in range(9)]
@@ -16,10 +18,14 @@ def generate_sudoku_puzzle(difficulty):
 
         return board
 
+
+    #Function to fill diagonal in three steps (sudoku rows)
     def fill_diagonal_boxes(board):
         for i in range(0, 9, 3):
             fill_box(board, i, i)
 
+
+    #Function to fill the empty boxes with shuffled numbers from 1-9
     def fill_box(board, row, col):
         values = [1, 2, 3, 4, 5, 6, 7, 8, 9]
         random.shuffle(values)

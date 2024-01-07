@@ -1,0 +1,24 @@
+Min-kuhi:
+- Igal sõlmel on vähemalt nii väike väärtus kui tema lastel.
+- Juursõlm on väikseima võimaliku väärtusega sõlm.
+- Lisaks võib min-kuhjas olla mitu sõlme samaväärse väikseima väärtusega.
+
+Max-kuhi:
+- Igal sõlmel on vähemalt nii suur väärtus kui tema lastel.
+- Juursõlm on suurima võimaliku väärtusega sõlm.
+- Lisaks võib max-kuhjas olla mitu sõlme samaväärse suurima väärtusega.
+
+Aja komplekssus:
+- Min-kuhja ja max-kuhja operatsioonide (lisamine, eemaldamine, korrastamine) ajakomplekssus on O(logn), kus n on kuhja suurus.
+- Kuhja loomiseks on aja komplekssus O(n).
+
+Ruumikomplekssus:
+- Ruumikomplekssus on O(n), kus n on kuhja suurus, sest kuhja struktuur salvestatakse tavaliselt massiivi või listina.
+
+Andmete sorteerimine:
+- Kuhja saab kasutada efektiivselt sorteerimiseks, eriti kui meie eesmärk on kasutada ainult sorteeritud elementi (nt. min-kuhja korral saame järjestada elemente kasvavas järjekorras).
+- Kõige tõhusam meetod on kuhja sorteerimine, kus elemente ekstraheeritakse min-kuhjast (või max-kuhjast) ükshaaval, tagades, et me saame elemente suurenevate väärtustega.
+
+Prioriteetjärjekordade haldamine:
+- Kuhja struktuurid sobivad suurepäraselt prioriteetjärjekordade haldamiseks. Näiteks min-kuhja puhul saab kiiresti leida ja eemaldada kõige väiksema elemendi.
+- Kuhjad on kasulikud ka juhul, kui soovime kiiresti leida või eemaldada elemente vastavalt nende prioriteedile, mis on määratud nende väärtuste kaudu.

@@ -1,0 +1,38 @@
+AVL Puu Teoreetiline Kirjeldus:
+
+AVL puu on tasakaalustatud binaarne otsingupuu, kus igal sõlmel on tasakaal, mis on määratud vasaku ja parema alampuu kõrguste vahega.
+See tähendab, et AVL puu tasakaalu on tagatud järgmiste reeglitega:
+
+- Iga sõlme tasakaal (balance factor) on kas -1, 0 või 1. See tähendab, et iga sõlme vasaku ja parema 
+  alampuu kõrguste vahe ei ületa ±1.
+- Iga operatsiooni (lisamine, kustutamine) järel värskendatakse iga sõlme kõrgust, et tagada tasakaalu säilimine.
+
+Punase-must puu on üks tasakaalustatud binaarne otsingupuu, millel on erinev tasakaalustamise lähenemine. 
+Sõlmed on värvitud kas mustaks või punaseks vastavalt kindlatele reeglitele, tagades puu tasakaalu.
+
+
+
+Teoreetiline Võrdlus AVL Puu ja Punase-Musta Puu Tõhususe Kohta:
+
+Otsinguoperatsioonid (otsimine, lisa, kustuta):
+AVL Puu: Tõhusam otsingukomplekssus O(logn), kuna tasakaalureeglid tagavad kõrguse kontrolli.
+Punase-Must Puu: Samuti pakub O(logn) otsingukomplekssust, kuid tasakaalustamisreeglid on veidi keerukamad.
+
+Tasakaalustamise operaatorid:
+AVL Puu: Vajab rohkem tasakaalustamisoperatsioone, mis võivad mõjutada lisamise ja kustutamise aega, kuid pakuvad kindlat tasakaalustatust.
+Punase-Must Puu: Vähem tasakaalustamisoperatsioone, mis võivad olla kiiremad, kuid vähem range tasakaal.
+
+Mälu Kasutamine:
+AVL Puu: Vajab rohkem täiendavat mälu tasakaalu hoidmiseks.
+Punase-Must Puu: Kasutab vähem mälu, sest iga sõlm vajab ainult ühte bitti värvi esindamiseks.
+
+
+Millistes Rakendustes Oleks Üks Struktuur Teisele Eelistatav:
+
+AVL Puu:
+Kui otsingute kiirus on kriitilise tähtsusega ja puu muutub harva (nt. andmebaasi indeks).
+Kui mälu kasutamine pole määrav tegur.
+
+Punase-Must Puu:
+Kui rohkem täiendavat mälu on piiratud ressurss (nt. mobiilirakendus).
+Kui andmestruktuuris tehakse rohkem lisamise ja kustutamise operatsioone.

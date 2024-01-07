@@ -1,0 +1,43 @@
+Punase-musta puu andmestruktuur:
+
+Punase-musta puu on tasakaalustatud binaarne otsingupuu, mis säilitab tasakaalu "värvimise" meetodiga. Iga sõlm punase-mustas puus 
+on kas must või punane. Sõlmede värvid võivad elementide lisamisel või eemaldamisel muutuda.
+
+Punase-musta puu oeamised omadused:
+
+Värvimine: 
+Iga sõlm on kas must või punane.
+Juurdepääsutee Värvireegel: 
+    Kõik teed juurest leheni peavad sisaldama sama arvu musti sõlmi. See tagab, et puu on tasakaalus.
+
+Sõlme Värvireegel: 
+    Kõik punased sõlmed peavad olema musta sõlme alamsõlmed ja kõik lehesõlmed (null-sõlmed) on mustad.
+
+Topoloogiline Sorteeritus: 
+    Iga tee juurest leheni läbib sama arvu musti sõlmi, mis tagab tasakaalustatuse.
+
+
+Punase-Musta Puu ja Binaarse Otsingupuu (BST) Tõhususe Võrdlus:
+
+Otsinguoperatsioonid (Otsimine, Lisa, Kustuta):
+Mõlemad struktuurid võimaldavad otsinguoperatsioonide kiiret teostamist, kuid punase-must puu on tasakaalustatud, mis tagab O(logn) 
+aja otsimiseks, lisamiseks ja kustutamiseks. Tavalisel binaarsel otsingupuul võib otsimise aeg halveneda kuni O(n), kui puu on 
+tasakaalustamata ja moodustub järjestikustest või sorteeritud sisestustest.
+
+Tasakaalustamine:
+Punase-must puu teoreetiline tasakaalustamine hoiab puu kõrgust h nii, et 
+
+h ≤ 2⋅log 2(n+1), 
+
+kus n on sõlmede arv. See tagab kiire otsingu, lisamise ja kustutamise operatsioonide. Tavalisel binaarsel otsingupuul ei ole 
+garanteeritud tasakaalustatus.
+
+Punase-musta puu tasakaalustamise ja värvireeglite roll tõhususele:
+
+Värvireeglid: 
+    Need värvireeglid tagavad, et iga tee juurest leheni sisaldab sama arvu musti sõlmi. See tagab puu 
+    tasakaalustatuse ja O(logn) otsimisaja.
+
+Tasakaalustamine: 
+    Kui lisatakse või kustutatakse sõlm, rakendatakse punase-musta puu tasakaalustamise reegleid, et tagada, et puu jääb tasakaalus. 
+    See hoiab ära puu kõrguse kasvu, mis muidu võiks mõjutada tõhusust.
